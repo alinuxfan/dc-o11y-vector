@@ -13,6 +13,7 @@ Pre-requisite:
 Getting started:
 1. Create Table in ClickHouse
 2. Edit .env and create the below variables
+
 ```
 DCUSER=admin
 DCPASS=OHJKLB34L5KJVHJ345FK435H23J
@@ -20,7 +21,7 @@ DCHOST=rw.qwertyuiop.at.double.cloud
 HTTPPORT=8443
 NATIVEPORT=9440
 DCCONNECT="https://${DCHOST}:${HTTPPORT}"
-
+```
  
  Bring up the containers using docker compose
 ```
