@@ -1,0 +1,19 @@
+[sources.logs]
+type = "demo_logs"
+format = "json"
+decoding.codec = "json"
+
+[sinks.clickhouse]
+inputs = ["logs"]
+type = "clickhouse"
+database = "vector"
+endpoint = "${DCCONNECT}" # Hostname of DoubleCloud Cluster
+table = "logs"
+compression = "gzip"
+tls.verify_hostname = false
+auth.user = "${DCUSER}" # username
+auth.password = "${DCPASS}" # password
+auth.strategy = "basic"
+batch.timeout_secs = 10
+request.concurrency = "adaptive"
+
